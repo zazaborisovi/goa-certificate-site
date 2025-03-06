@@ -70,7 +70,7 @@ export default function CourseDivs() {
             Courses.map((item , index) => (
                 <div 
                 className='
-                h-fit w-[20%] bg-black *:text-green-800 border-2 border-black rounded-2xl flex flex-col items-center gap-5 p-4 
+                h-fit w-[60%] md:w-fit bg-black *:text-green-800 border-2 border-black rounded-2xl flex flex-col items-center gap-5 p-4 
                 shadow-[0px_1px_20px_5px] shadow-green-800
                 '>
                     <h1 className='text-2xl'>{item.title}</h1>
