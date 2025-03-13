@@ -1,15 +1,11 @@
 import React from 'react'
 import { Facebook } from 'lucide-react';
 import CourseDivs from './components/CourseDivs.jsx';
+import Header from './components/Header.jsx'
 
 export default function App() {
-  const scrollToSection = (id) => {
-      document.getElementById(id).scrollIntoView({ top: document.getElementById(id).offsetTop , behavior: "smooth" })
-    }
-  const headerList = [
-      {"li": "Main"},
-      {"li": "Courses"}
-    ]
+  
+
   const reviews = [
       {"h1": "Best Academy in the world.Best Mentors and best Friends❣️💚" , "link": "https://www.facebook.com/share/p/18fHEhmzJK/"},
       {"h1": "მეგობრული გარემო, კარგი მენტორები და დახვეწილი მასალა" , "link": "https://www.facebook.com/share/p/1EAZmUUnXA/"},
@@ -17,19 +13,11 @@ export default function App() {
       {"h1": "GOA არის მსოფლიოში საუკეთესო აკადემია!" , "link": "https://www.facebook.com/share/p/15HB56TKk8/"},
       {"h1": "ყველაზე მეგობრული გარემო სადაც შემოსვლას არ ინანებთ ეს გოაა ❤ ❤" , "link": "https://www.facebook.com/share/p/18nfXJCRCe/"},
   ]
+
   return (
     <div className='bg-black'>
-      <header className='bg-black h-20 w-full *:text-xl *:text-emerald-800 flex items-center *:h-max overflow-hidden justify-between sticky top-0'>
-        <img src="../assets/goaLogo.jpg" alt='Goa Logo' className='w-30 ml-10'/>
-        <ul className='flex gap-5'>
-          {
-            headerList.map((item , index) => (
-              <li onClick={() => scrollToSection(`section${index + 1}`)}>{item.li}</li>
-            ))
-          }
-        </ul>
-        <button className='mr-10' onClick={() => window.open('https://www.facebook.com/nika11keshelava/', '_blank')}>Join GOA</button>
-      </header>
+      
+      <Header />
       <div className='flex flex-col md:flex-row items-center justify-around px-5 py-5 gap-10' id='section1'>
         <div className='w-full md:w-[45%] flex border-2 border-black p-5 md:p-10  rounded-4xl bg-black shadow-[0px_1px_20px_5px] shadow-green-800'>
           <p className='text-lg md:text-xl w-fit font-sans font-extrabold flex items-center text-emerald-800 '
