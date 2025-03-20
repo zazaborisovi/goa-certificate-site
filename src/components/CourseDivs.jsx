@@ -51,16 +51,16 @@ export default function CourseDivs() {
         })
     }
     const details = (item , index) => {
-        if (active === index){
-            return(
-                <div id={`detail${index}`} className='flex items-end flex-col'>
-                    <ol className='text-lg list-decimal flex flex-col w-[80%] items-start' start={0}>
-                    {
-                    item.listedItems.map((i) => (
-                        <li>{i}</li>
-                    ))}
-                    </ol>
-                </div>
+    if (active === index){
+        return(
+            <div id={`detail${index}`} className='flex items-end flex-col'>
+                <ol className='text-lg list-decimal flex flex-col w-[80%] items-start' start={0}>
+                {
+                item.listedItems.map((i) => (
+                    <li>{i}</li>
+                ))}
+                </ol>
+            </div>
             )
         }
     }

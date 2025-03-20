@@ -2,6 +2,7 @@ import React from 'react'
 import { Facebook } from 'lucide-react';
 import CourseDivs from './components/CourseDivs.jsx';
 import Header from './components/Header.jsx'
+import FooterDiv from './components/FooterDiv.jsx';
 
 export default function App() {
   const reviews = [
@@ -16,6 +17,7 @@ export default function App() {
     <div className='bg-black cursor-default selection:bg-teal-400'>
       
       <Header />
+      {/* main section */}
       <div className='flex flex-col md:flex-row items-center justify-around px-5 py-5 gap-10' id='section1'>
         <div className='w-full md:w-[45%] flex border-2 border-black p-5 md:p-10  rounded-4xl bg-black shadow-[0px_1px_20px_5px] shadow-green-800 hover:scale-115 transition-all duration-500'>
           <p className='text-lg md:text-xl w-fit font-sans font-extrabold flex items-center text-emerald-800 '
@@ -32,6 +34,7 @@ export default function App() {
         </iframe>
         </div>
       </div>
+      {/* review section */}
       <div className='flex flex-col items-center gap-5 my-10 px-5'>
         <h1 className='text-xl text-green-800'>Reviews:</h1>
         <div className='flex flex-wrap gap-10 justify-center w-full *:shadow-[0px_1px_20px_5px] *:shadow-green-800'>
@@ -48,14 +51,15 @@ export default function App() {
               ))
           }
         </div>
-        
       </div>
+      {/* course section */}
       <div className='py-10 flex flex-col gap-10 items-center px-5 w-full sm:h-[600px] pb-20' id='section2'>
         <h1 className='text-2xl text-green-800'>Courses:</h1>
         <div className='w-full flex flex-wrap justify-center md:justify-around gap-10 *:hover:scale-125 *:duration-500 transition-all'>
           <CourseDivs />
         </div>
       </div>
+      <FooterDiv />
     </div>
   )
 }
